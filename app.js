@@ -23,14 +23,14 @@ app.get('/', function(req, res) {
     });
 
 });
-app.get('/correspondencias', function(req, res)  {
-    res.render('correspondencias',{
-        title: 'Correspondências'
+app.get('/correspondencia', function(req, res)  {
+    res.render('correspondencia',{
+        title: 'Correspondência'
     });
 });
-app.get('/ocorrencias', function(req, res){
-    res.render('ocorrencias',{
-        title: 'Ocorrências'
+app.get('/ocorrencia', function(req, res){
+    res.render('ocorrencia',{
+        title: 'Ocorrência'
     });
 })
 app.post('/cadastro',function(req , res){
