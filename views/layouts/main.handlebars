@@ -14,26 +14,53 @@
     <link rel="icon" type="image/x-icon" href="img/QacessLogo.png">
 </head>
 <body>
-<nav>
-    <ul class="nav nav-pills justify-content-end">
-        <a class="navbar-brand" href="#"><img src="img/Qacess.png" class="logonavbar" alt=""></a>
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-    </li>
-    </ul>
-</nav>
+<header>
+  <nav class="navbar navbar-expand-lg nav">
+    <div class="container">
+      <a class="navbar-brand" href="/"><img src="img/Qacess.png" class="logonavbar" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse listaNav" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {{pageHome}}" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{pageOcorrencia}}" href="/ocorrencia">
+            Ocorrência
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{pageCorrespondencia}}" href="/correspondencia">
+              Corrêspondencia
+              <span class="position-absolute translate-middle badge rounded-pill bg-danger">
+              {{numeroCorrespondencia}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{pageLogin}}" href="/login">Login</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<main>
     {{{ body }}}
+</main>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+    <div class="container">
 
-
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+        <span class="mb-3 mb-md-0 text-muted">© 2022 QAccess, Inc</span>
+        </div>
+    </div>
+</footer>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script src="js/materialize.js"></script>
