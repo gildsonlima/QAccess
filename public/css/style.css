@@ -1,13 +1,28 @@
-.nav{
-    margin: 0;
+
+.nav {
     background-color: #339CE9;
 }
-div .container{
-    height: 80vh;
+
+.nav .container{
+    display: flex;
+    justify-content: space-between;    
+}
+
+.navbar-expand-lg .navbar-collapse{
+    justify-content: flex-end
+}
+
+.nav .navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+main .container{
+    height: 78vh;
 }
 
 .logonavbar{
-    width: 4vh;  
+    width: 15vh;  
 }
 
 .nav-link{
@@ -15,4 +30,32 @@ div .container{
 }
 .active{
     color: rgb(187, 187, 187);
+}
+
+.carousel-inner{
+    width: 60vw;
+    margin: auto;
+    margin-top: 3%;
+    height: 50vh;
+    overflow :hidden;
+}
+
+
+.carousel-control-prev {
+    left: 10%;
+}
+
+.carousel-control-next {
+    right: 10%;
+}
+
+@media(max-width: 768px){
+    .nav .container{
+        display: flex;
+        flex-direction: row;    
+    }
+
+    .nav .navbar-nav{
+        flex-direction: column;
+    }
 }
