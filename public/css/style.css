@@ -17,10 +17,6 @@
     flex-direction: row;
 }
 
-main .container{
-    height: 78vh;
-}
-
 .logonavbar{
     width: 15vh;  
 }
@@ -28,8 +24,11 @@ main .container{
 .nav-link{
     color: white;
 }
-.active{
-    color: rgb(187, 187, 187);
+
+main .container{
+    margin-top: 5vh;
+    height: 78vh;
+    width: 80vw;
 }
 
 .carousel-inner{
