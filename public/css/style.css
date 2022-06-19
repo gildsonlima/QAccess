@@ -1,9 +1,11 @@
 
 .nav {
+    height: 8vh;
     background-color: #339CE9;
 }
 
 .nav .container{
+    width: 80vw;
     display: flex;
     justify-content: space-between;    
 }
@@ -26,9 +28,10 @@
 }
 
 main .container{
-    margin-top: 5vh;
-    height: 78vh;
+    padding-top: 5vh;
+    height: 84vh;
     width: 80vw;
+    background-color: white;
 }
 
 .carousel-inner{
@@ -39,6 +42,11 @@ main .container{
     overflow :hidden;
 }
 
+footer{
+    height: 8vh;
+    background-color: #ffffff;
+    
+}
 
 .carousel-control-prev {
     left: 10%;
@@ -119,13 +127,14 @@ main .container{
         
     .background {
         display: flex;
-        min-height: 100vh;
+        
     }
         
-    .container {
+    .background .container {
         flex: 0 1 700px;
         margin: auto;
-        padding: 10px;
+        padding-top: 20vh;
+        background-color: transparent;
     }
         
     .screen {
