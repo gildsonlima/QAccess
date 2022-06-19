@@ -16,25 +16,37 @@ app.use(express.static('public'));
 app.use(pb.urlencoded({extended: false}))
 app.use(pb.json());
 
+//variaveis do usuario
+var numeroCorrespondencia = 5
+
 //rotas
 app.get('/', function(req, res) {
     res.render('home',{
-        title: 'QAccess'
+        title: 'QAccess',
+        pageHome: 'active',
+        numeroCorrespondencia
     });
 
 });
 app.get('/correspondencia', function(req, res)  {
     res.render('correspondencia',{
-        title: 'Correspondência'
+        title: 'Correspondência',
+        pageCorrespondencia: 'active',
+        numeroCorrespondencia
     });
 });
 app.get('/ocorrencia', function(req, res){
     res.render('ocorrencia',{
-        title: 'Ocorrência'
+        title: 'Ocorrência',
+        pageOcorrencia: 'active',
+        numeroCorrespondencia
     });
 })
-app.post('/cadastro',function(req , res){
-    
+app.get('/login', function(req, res){
+    res.render('login',{
+        title: 'Login',
+        pageLogin: 'active',
+    });
 })
 
 
