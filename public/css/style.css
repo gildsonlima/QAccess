@@ -62,238 +62,240 @@ main .container{
 
 /* Css daltrão */
 
-.fsenha{
-    text-decoration: none;
-    color: #888;
-    font-family: 'Montserrat', sans-serif;
+.fsenha {
+      text-decoration: none;
+      color          : #888;
+      font-family    : 'Montserrat', sans-serif;
 }
-  
-.contact{
-    text-decoration: none;
-    color: #888;
-    font-family: 'Montserrat', sans-serif;
+
+.contact {
+      text-decoration: none;
+      color          : #888;
+      font-family    : 'Montserrat', sans-serif;
 }
-  
-.form-check-label{
-    color: #888;
-    font-family: 'Montserrat', sans-serif;
+
+.form-check-label {
+      color      : #888;
+      font-family: 'Montserrat', sans-serif;
 }
-  
-.app-description{
-    display: flex;
-          flex-direction: column;
-          position: relative;
-          color: #FFA61E;
-          font-size: 12px;
+
+.app-description {
+      display       : flex;
+      flex-direction: column;
+      position      : relative;
+      color         : #FFA61E;
+      font-size     : 12px;
+      margin-top    : 1vh;
 }
-  
+
 .bg-image-vertical {
-     position: relative;
-      overflow: hidden;
-      background-repeat: no-repeat;
+      position           : relative;
+      overflow           : hidden;
+      background-repeat  : no-repeat;
       background-position: right center;
-      background-size: auto 100%;
+      background-size    : auto 100%;
 }
-      
-    @media (min-width: 1025px) {
+
+@media (min-width: 1025px) {
       .h-custom-2 {
-      height: 100%;
+            height: 100%;
       }
-    }
-  
+}
+    
     *, *:before, *:after {
-          box-sizing: border-box;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-        
+    
     body {
           background: linear-gradient(to right, #0000FF 0%, #339CE9 100%);
-          font-size: 12px;
+          font-size : 12px;
     }
-        
-    body, button, input {
-          font-family: 'Montserrat', sans-serif;
-          font-weight: 700;
+
+    body,
+    button,
+    input {
+          font-family   : 'Montserrat', sans-serif;
+          font-weight   : 700;
           letter-spacing: 1.4px;
     }
-        
+
     .background {
-          display: flex;
+          display   : flex;
           min-height: 100vh;
     }
-        
+
     .container {
-          flex: 0 1 700px;
-          margin: auto;
+          flex   : 0 1 700px;
+          margin : auto;
           padding: 10px;
     }
-        
+
     .screen {
-          position: relative;
-          background: #ffffff;
+          position     : relative;
+          background   : #ffffff;
           border-radius: 15px;
     }
-        
+
     .screen:after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 20px;
-          right: 20px;
-          bottom: 0;
+          content      : '';
+          display      : block;
+          position     : absolute;
+          top          : 0;
+          left         : 20px;
+          right        : 20px;
+          bottom       : 0;
           border-radius: 15px;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-          z-index: -1;
+          box-shadow   : 0 20px 40px rgba(0, 0, 0, .4);
+          z-index      : -1;
     }
-        
+
     .screen-header {
-          display: flex;
-          align-items: center;
-          padding: 10px 20px;
-          background: #ffffff;
-          border-top-left-radius: 15px;
+          display                : flex;
+          align-items            : center;
+          padding                : 10px 20px;
+          background             : #ffffff;
+          border-top-left-radius : 15px;
           border-top-right-radius: 15px;
     }
-        
+
     .screen-header-left {
           margin-right: auto;
     }
-                   
+
     .screen-body {
           display: flex;
     }
-        
+
     .screen-body-item {
-          flex: 1;
+          flex   : 1;
           padding: 50px;
     }
-        
+
     .screen-body-item.left {
-          display: flex;
+          display       : flex;
           flex-direction: column;
     }
-        
+
     .app-title {
-          display: flex;
+          display       : flex;
           flex-direction: column;
-          position: relative;
-          color: #FFA61E;
-          font-size: 22px;
+          position      : relative;
+          color         : #FFA61E;
+          font-size     : 22px;
     }
-        
+
     .app-title:after {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          width: 80px;
-          height: 4px;
+          content   : '';
+          display   : block;
+          position  : absolute;
+          left      : 0;
+          bottom    : -10px;
+          width     : 80px;
+          height    : 4px;
           background: #FFA61E;
     }
-        
+
     .app-contact {
           margin-top: auto;
-          font-size: 8px;
-          color: #888;
+          font-size : 8px;
+          color     : #888;
     }
-        
+
     .app-form-group {
           margin-bottom: 15px;
     }
-        
+
     .app-form-group.message {
           margin-top: 40px;
     }
-        
+
     .app-form-group.buttons {
           margin-bottom: 0;
-          text-align: right;
+          text-align   : right;
     }
-        
+
     .app-form-control {
-          width: 100%;
-          padding: 10px 0;
-          background: none;
-          border: none;
-          border-bottom: 1px solid #666;
-          color: #0000FF;
-          font-size: 12px;
+          width         : 100%;
+          padding       : 10px 0;
+          background    : none;
+          border        : none;
+          border-bottom : 1px solid #666;
+          color         : #0000FF;
+          font-size     : 12px;
           text-transform: uppercase;
-          outline: none;
-          transition: border-color .2s;
+          outline       : none;
+          transition    : border-color .2s;
     }
-        
+
     .app-form-control::placeholder {
           color: #666;
     }
-        
+
     .app-form-control:focus {
           border-bottom-color: #ddd;
     }
-        
+
     .app-form-button {
           background: none;
-          border: none;
-          color: #FFA61E;
-          font-size: 14px;
-          cursor: pointer;
-          outline: none;
+          border    : none;
+          color     : #FFA61E;
+          font-size : 14px;
+          cursor    : pointer;
+          outline   : none;
     }
-        
+
     .app-form-button:hover {
           color: #339CE9;
     }
-        
+
     .credits {
-          display: flex;
+          display        : flex;
           justify-content: center;
-          align-items: center;
-          margin-top: 20px;
-          color: #ddd;
-          font-family: 'Roboto Condensed', sans-serif;
-          font-size: 10px;
-          font-weight: normal;
+          align-items    : center;
+          margin-top     : 20px;
+          color          : #ddd;
+          font-family    : 'Roboto Condensed', sans-serif;
+          font-size      : 10px;
+          font-weight    : normal;
     }
-           
+
     .dribbble {
-          width: 20px;
+          width : 20px;
           height: 20px;
           margin: 0 5px;
     }
-        
-        @media screen and (max-width: 520px) {
-          .screen-body {
-            flex-direction: column;
-        }
-        
-        .screen-body-item.left {
-            margin-bottom: 30px;
-        }
-        
-        .app-title {
-            flex-direction: row;
-        }
-        
-        .app-title span {
-            margin-right: 12px;
-        }
-        
-        .app-title:after {
-            display: none;
-        }
-        }
-        
-        @media screen and (max-width: 600px) {
-          .screen-body {
-            padding: 40px;
-          }
-        
-          .screen-body-item {
-            padding: 0;
-          }
-        }
 
+    @media screen and (max-width: 520px) {
+          .screen-body {
+                flex-direction: column;
+          }
+
+          .screen-body-item.left {
+                margin-bottom: 30px;
+          }
+
+          .app-title {
+                flex-direction: row;
+          }
+
+          .app-title span {
+                margin-right: 12px;
+          }
+
+          .app-title:after {
+                display: none;
+          }
+    }
+
+    @media screen and (max-width: 600px) {
+          .screen-body {
+                padding: 40px;
+          }
+
+          .screen-body-item {
+                padding: 0;
+          }
+    }
 /* Css daltrão /\ */
