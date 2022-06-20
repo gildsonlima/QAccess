@@ -48,7 +48,12 @@ app.get('/login', function(req, res){
         pageLogin: 'active',
     });
 })
-
+app.get('/encomendapesquisa', function(req, res)  {
+    res.render('encomendaPesquisa',{
+        pageCorrespondencia: 'active',
+        numeroCorrespondencia
+    });
+});
 
 app.listen(3000);
 
