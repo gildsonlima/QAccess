@@ -71,13 +71,13 @@ app.get('/ocorrencia', function(req, res){
     });
 })
 
-
 app.get('/login', function(req, res){
     res.render('login',{
         title: 'Login',
         pageLogin: 'active'
     });
 })
+
 app.post('/ocorrencia', function(req, res){
     let nome = req.body.nome;
     let local = req.body.local;
@@ -102,6 +102,12 @@ app.post('/ocorrencia', function(req, res){
         pageOcorrencia: 'active',
         numeroCorrespondencia,
         ocorrencias
+    });
+});
+app.get('/encomendapesquisa', function(req, res)  {
+    res.render('encomendaPesquisa',{
+        pageCorrespondencia: 'active',
+        numeroCorrespondencia
     });
 });
 
