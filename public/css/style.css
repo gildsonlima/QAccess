@@ -56,6 +56,12 @@ footer{
     right: 10%;
 }
 
+.scroll{
+    height: 30vh;
+    overflow: scroll;
+    border: solid rgb(175, 175, 175) 1px;
+}
+
 @media(max-width: 768px){
     .nav .container{
         display: flex;
