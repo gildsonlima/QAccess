@@ -10,14 +10,14 @@ const path = require('path');
 
 var app = express();
 
-//configuração para indentificar framework que fara redenrização
+// Configuração para indentificar framework que fara redenrização
 app.engine('handlebars',engine());
 app.set('view engine', 'handlebars');
 app.set('views','./views');
 
 app.use(express.static('public'));
 
-//configurações para login
+// Configurações para login
 app.use(session({
 	secret: 'secret',
 	resave: true,
@@ -28,27 +28,28 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
 
 
-// configuração do body-parse
+// Configuração do body-parse
 app.use(pb.urlencoded({extended: false}))
 app.use(pb.json());
 
-//configuração banco de dados
+// Configuração banco de dados
 var mysqlConnection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: '123456',
+    password: 'ubiq2022',
     database: 'qaccess'
 });
 
-//variaveis do usuario
+// Variaveis do usuario
 var ocorrencias = [];
 var correspondencias = [];
 var usuario = [];
 var numeroCorrespondencia = correspondencias.length;
 var rota = '/';
 
-//rotas
+// Rotas
 app.get('/', function(req, res) {
+    rota = '/'
     res.render('home',{
         title: 'QAccess',
         pageHome: 'active',
@@ -75,8 +76,6 @@ app.get('/correspondencia', function(req, res)  {
         })
     }
 });
-
-
 
 app.get('/ocorrencia', function(req, res){
     if (req.session.loggedin){
@@ -165,25 +164,7 @@ app.post('/correspondencia', function(req, res){
         correspondencias
     });
 });
-app.post('/login', function(req, res){
-    let login = req.body.login;
-    let senha = req.body.senha;
-    mysqlConnection.connect(function(err){
-        if(err){ throw err;}else{
-        console.log('Conectado');}
-        let sql = "SELECT usuarios.* FROM usuarios WHERE login = ? AND senha = ?;";
-        mysqlConnection.query(sql, [login, senha], function(err, resultSet, fields){
-            if(err)throw err;
-            usuario = resultSet;
-            console.log('login efetuado')
-        })
-    })
-    if(usuario)
-    getCorrespondencia();
-    res.render('home',{
-        title: 'Home',
-    });
-});
+
 app.post('/auth', function(req, res) {
 	let username = req.body.login;
 	let password = req.body.senha;

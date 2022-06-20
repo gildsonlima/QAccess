@@ -155,7 +155,7 @@ footer{
         
     .background {
         display: flex;
-        
+        height: 84vh;
     }
         
     .background .container {
@@ -331,5 +331,6 @@ footer{
             padding: 0;
         }
         }
+        
 
 /* Css daltrão /\ */
