@@ -25,11 +25,12 @@
         </div>
         <div class="screen-body-item">
             <div class="app-form">
+            <form method="post" action="/auth">
             <div class="app-form-group">
-                <input class="app-form-control" placeholder="Usuário">
+                <input class="app-form-control" name="login" placeholder="Usuário">
             </div>
             <div class="app-form-group">
-                <input type="password" class="app-form-control" placeholder="Senha">
+                <input type="password" class="app-form-control" name="senha" placeholder="Senha">
             </div>
             <div class="screen-header-right">
                 <div class="form-check form-switch">
@@ -41,8 +42,9 @@
                 <a class="fsenha" href="" class="text">Esqueci minha senha.</a>
             </div>
             <div class="app-form-group buttons">
-                <button class="app-form-button">Enviar</button>
+                <button class="app-form-button" type="submit">Enviar</button>
             </div>
+            </form>
             </div>
         </div>
         </div>

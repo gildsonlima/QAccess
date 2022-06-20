@@ -1,61 +1,66 @@
-<div class = "container">  
-    <form class = "panel" method="post">
-        <div   class = "row">
-            <div class = "my-3 col">
-                <label for   = "exampleFormControlInput1" class = "form-label">Nome do morador</label>
-                <input type  = "text" class= "form-control" name="nome" id = "exampleFormControlInput1" placeholder = "">
+<main>
+    <div class = "container">  
+        <form class = "panel" method="post">
+            <div   class = "row">
+                <div class = "my-3 col">
+                    <label for   = "exampleFormControlInput1" class = "form-label">Nome do morador</label>
+                    <input type  = "text" class= "form-control" name="nome" required id = "exampleFormControlInput1" placeholder = "">
+                </div>
+                <div class = "my-3 col">
+                    <label for   = "exampleFormControlInput1" class = "form-label">Local</label>
+                    <input type  = "text" class= "form-control" name="local" id="exampleFormControlInput1" required placeholder = "">
+                </div>
+                <div class = "my-3 col">
+                    <label  for   = "exampleFormControlInput1" class = "form-label">Selecione a sua unidade: </label>
+                    <select class = "form-select" aria-label="Default select example">
+                        <option value = ""></option>
+                        <option value = "1">101A - Torre das Acássias</option>
+                        <option value = "2">201A - Torre dos Ipês</option>
+                        <option value = "3">301A - Torre das Rosas</option>
+                    </select>
+                </div>
             </div>
-            <div class = "my-3 col">
-                <label for   = "exampleFormControlInput1" class = "form-label">Local</label>
-                <input type  = "text" class= "form-control" name="local" id="exampleFormControlInput1" placeholder = "">
+            <div class = "mb-3">
+                <label    for="exampleFormControlTextarea1" class="form-label">Descrição da ocorrência</label>
+                <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows = "5"></textarea>
             </div>
-            <div class = "my-3 col">
-                <label  for   = "exampleFormControlInput1" class = "form-label">Selecione a sua unidade: </label>
-                <select class = "form-select" aria-label="Default select example">
-                    <option value = ""></option>
-                    <option value = "1">101A - Torre das Acássias</option>
-                    <option value = "2">201A - Torre dos Ipês</option>
-                    <option value = "3">301A - Torre das Rosas</option>
-                </select>
+            <div   class = "row justify-content-end">
+                {{!-- Para atualização futura --}}
+                {{!-- <div   class = "my-3 col">
+                    <label for   = "formFile" class    = "form-label">Anexar arquivo</label>
+                    <input class = "form-control" type = "file" id = "formFile">
+                </div> --}}
+                <div    class = "col col-lg-2">
+                    <button class = "btn btn-primary" type = "submit">Enviar</button>   
+                </div>
+                <div class="col col-lg-2">
+                <a href="/ocorrencia"><button class = "btn btn-primary" type = "button">Atualizar</button></a>
+                </div>
             </div>
-        </div>
-        <div class = "mb-3">
-            <label    for="exampleFormControlTextarea1" class="form-label">Descrição da ocorrência</label>
-            <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows = "5"></textarea>
-        </div>
-        <div   class = "row">
-            {{!-- Para atualização futura --}}
-            {{!-- <div   class = "my-3 col">
-                <label for   = "formFile" class    = "form-label">Anexar arquivo</label>
-                <input class = "form-control" type = "file" id = "formFile">
-            </div> --}}
-            <div    class = "col-12">
-                <button class = "btn btn-primary" type = "submit">Enviar</button>
-            </div>
-        </div>
-        <div class="scroll">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Local</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each ocorrencias}}
+            <div class="scroll">
+                <table class="table table-bordered">
+                    <thead>
                         <tr>
-                            <th scope="row">{{idOcorrencia}}</th>
-                            <td></td>
-                            <td>{{moment Date format=data}}</td>
-                            <td>{{status}}</td>
-                            <td>{{local}}</td>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Local</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Status</th>
                         </tr>
-                    {{/each}}
-                </tbody>
-            </table>
-        </div>
-    </form>
-</div>
+                    </thead>
+                    <tbody>
+                        {{#each ocorrencias}}
+                            <tr>
+                                <th scope="row">{{idOcorrencia}}</th>
+                                <td>{{idCondomino}}</td>
+                                <td>{{local}}</td>
+                                <td>{{moment Date format=data}}</td>
+                                <td>{{status}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</main>

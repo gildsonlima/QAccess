@@ -1,43 +1,84 @@
-<div class="container">
-    <br>
-    <h4>Cadastrar Encomendas</h4>
-    <form>
-    <div class="row">
-        <div class="my-3 col">
-            <label class="form-label">Unidade</label>
-            <input class="form-control" type="text" name="f_unidade">
-        </div>
-        <div class="my-3 col">
-            <label class="form-label">Data Recebimento</label>
-            <input class="form-control" type="date" name="f_dataEntrada">
+<main>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Cadastrar encomendas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Pesquisar encomendas</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            {{!-- Aba de cadastrar Encomenda --}}
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <form method="post">
+                <div class="row" >
+                    <div class="my-3 col">
+                        <label class="form-label">Unidade</label>
+                        <input class="form-control" type="text" name="unidade" required>
+                    </div>
+                    <div class="my-3 col">
+                        <label class="form-label">Remetente</label>
+                        <input class="form-control" type="text" name="remetente" required>
+                    </div>
+                </div>
+                <label class="form-label">Nome Destinatário</label>
+                <input class="form-control" type="text" name="nomeDestinatario" required>
+                <div class="row">
+                    <div class="my-3 col">
+                        <label class="form-label">Identificação Encomenda</label>
+                        <input class="form-control" type="text" name="indentificacaoEncomenda" placeholder="Ex: AA123456789BR" required>
+                    </div>
+                    <div class="my-3 col">
+                        <label class="form-label">Tipo</label>
+                        <input class="form-control" placeholder="Caixa" type="text" name="tipoEncomenda" required >
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <div class=" col col-lg-2">
+                        <button class = "btn btn-primary" type = "submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+            {{!-- Aba de verificar Encomenda --}}
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <label for="exampleDataList" class="form-label"></label>
+                <input class="form-control" list="datalistOptions" id="" placeholder="Pesquisar...">
+                <br>
+                <div class="row justify-content-end">
+                    <div    class = " col col-lg-2 ">
+                        <button type="button" class="btn btn-primary" type="submit" value="Entregar">Entregar</button>
+                    </div>
+                    <div class=" col col-lg-2 ">
+                    <a href="/correspondencia"><button class = "btn btn-primary"  type="button">Atualizar</button></a>
+                </div>
+                </div>
+                <div class="scroll">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Unidade</th>
+                                <th scope="col">Nome Destinatário</th>
+                                <th scope="col">Identificação Encomenda</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Seleção</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each correspondencias}}
+                                <tr>
+                                    <th scope="row">{{idUnidade}}</th>
+                                    <td>{{destinatario}}</td>
+                                    <td>{{indentificacaoEncomenda}}</td>
+                                    <td>{{status}}</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-        <label class="form-label">Nome Destinatário</label>
-        <input class="form-control" type="text" name="f_nome">
-    <div class="row">
-        <div class="my-3 col">
-            <label class="form-label">Identificação Encomenda</label>
-            <input class="form-control" type="text" name="f_idEncomenda">
-        </div>
-        <div class="my-3 col">
-            <label class="form-label">Remetente</label>
-            <input class="form-control" type="text" name="f_remetente">
-        </div>
-    </div>
-    <div class="row">
-        <div class="my-3 col">
-            <label class="form-label">Tipo</label>
-            <input class="form-control" type="text" name="f_tipo">
-        </div>
-        <div class="my-3 col">
-            <label class="form-label">Responsável pelo Recebimento</label>
-            <input class="form-control" type="text" name="f_respRecebimento">
-        </div>
-    </div>
-        <div class="my-3 col">
-            <input class="btn btn-primary" type="submit" name="btn_enviar" value="Enviar"/>
-        </div>
-
-</form>
-   
-</div>
+</main>
