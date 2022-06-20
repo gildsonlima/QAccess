@@ -1,0 +1,60 @@
+<div class="container">
+    <br>
+    <h4>Cadastrar Encomendas</h4>
+    <form>
+    <div class="row">
+        <div class="my-3 col">
+            <label class="form-label">Unidade</label>
+            <input class="form-control" type="text" name="f_unidade">
+        </div>
+        <div class="my-3 col">
+            <label class="form-label">Data Recebimento</label>
+            <input class="form-control" type="date" name="f_dataEntrada">
+        </div>
+    </div>
+        <label class="form-label">Nome Destinatário</label>
+        <input class="form-control" type="text" name="f_nome">
+    <div class="row">
+        <div class="my-3 col">
+            <label class="form-label">Identificação Encomenda</label>
+            <input class="form-control" type="text" name="f_idEncomenda">
+        </div>
+        <div class="my-3 col">
+            <label class="form-label">Remetente</label>
+            <input class="form-control" type="text" name="f_remetente">
+        </div>
+    </div>
+    <div class="row">
+        <div class="my-3 col">
+            <label class="form-label">Tipo</label>
+            <input class="form-control" type="text" name="f_tipo">
+        </div>
+        <div class="my-3 col">
+            <label class="form-label">Responsável pelo Recebimento</label>
+            <input class="form-control" type="text" name="f_respRecebimento">
+        </div>
+    </div>
+        <div class="my-3 col">
+            <input class="btn btn-primary" type="submit" name="btn_enviar" value="Enviar"/>
+        </div>
+
+</form>
+    <br>
+    <h4>Pesquisar Encomendas</h4>
+        <label for="exampleDataList" class="form-label"></label>
+        <input class="form-control" list="datalistOptions" id="" placeholder="Pesquisar...">
+    <br>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-3 d-flex align-items-center justify-content-center">Unidade</div>
+                <div class="col-3 d-flex align-items-center justify-content-center">Nome Destinatário</div>
+                <div class="col-3 d-flex align-items-center justify-content-center">Identificação Encomenda</div>
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn btn-primary" type="submit" value="Entregar">Entregar</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+<br><br><br>
+</div>
